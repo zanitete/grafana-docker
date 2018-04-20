@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 _grafana_tag=$1
-_grafana_version=${_grafana_tag:1}
+_grafana_version=$(echo ${_grafana_tag} | cut -d "v" -f 2)
 _docker_repo=${2:-grafana/grafana}
+
 
 echo ${_grafana_version}
 
