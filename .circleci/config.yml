@@ -11,7 +11,7 @@ jobs:
       - run: ./build.sh ${GRAFANA_VERSION}
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            #if [ "${CIRCLE_BRANCH}" == "master" ]; then
               docker login -u $DOCKER_USER -p $DOCKER_PASS
               ./push_to_docker_hub.sh ${GRAFANA_VERSION}
-            fi
+            #fi
