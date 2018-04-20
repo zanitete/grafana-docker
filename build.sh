@@ -1,7 +1,6 @@
 #!/bin/sh
 
 _grafana_version=$1
-
 _docker_repo=${2:-grafana/grafana}
 
 if [ "$_grafana_version" != "" ]; then
