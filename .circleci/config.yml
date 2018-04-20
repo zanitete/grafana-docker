@@ -8,7 +8,7 @@ jobs:
       - setup_remote_docker
       - run: docker info
       - run: echo $GRAFANA_VERSION
-      - bash: ./build.sh ${GRAFANA_VERSION}
+      - run: ./build.sh ${GRAFANA_VERSION}
       - deploy:
           command: |
             #if [ "${CIRCLE_BRANCH}" == "master" ]; then
